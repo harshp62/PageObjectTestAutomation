@@ -3,7 +3,7 @@
 
 
 
-<suite name="Suite">
+<suite name="Suite" parallel="tests">
 
 <listeners>
 	<listener class-name="base.TestListener"/>

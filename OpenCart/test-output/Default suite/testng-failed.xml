@@ -7,7 +7,7 @@
         <methods>
           <include name="initializeTwo"/>
           <include name="tearDownTwo"/>
-          <include name="testAllLinks"/>
+          <include name="testLoginInvalid"/>
         </methods>
       </class> <!-- tests.LandingPageTest -->
     </classes>
