@@ -7,6 +7,8 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import reporting.extentReporterNG;
 
@@ -36,6 +38,7 @@ public class TestListener implements ITestListener {
 		Utility.takesnapshot(result.getName());
 		test.fail(result.getThrowable());
 		test.addScreenCaptureFromPath(System.getProperty("user.dir")+"//SS//" + result.getName() +".png", result.getName());
+		test.info(MarkupHelper.createLabel("FAILED!!!", ExtentColor.RED));
 	}
 
 	@Override
