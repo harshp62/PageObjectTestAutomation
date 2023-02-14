@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Utility {
 
 	public static WebDriver driver;
+	public static JavascriptExecutor js;
 
 	public Utility(WebDriver driver) {
 
@@ -93,15 +94,38 @@ public class Utility {
 		}
 
 	}
-	
+
 	public static void takesnapshot(String name) {
 //		System.out.println("Taking screenshot method is called");
 		try {
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"//SS//" + name + ".png"));
+			FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "//SS//" + name + ".png"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static void acceptAlert() {
+
+		driver.switchTo().alert().accept();
+	}
+
+	public static void dismissAlert() {
+
+		driver.switchTo().alert().dismiss();
+	}
+	
+	public static void jsClick(WebElement element) {
+		
+		js= (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", element);
+		
+	}
+	
+	public static void jsSendClick(String text, WebElement element) {
+		
+		js= (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].value="+text+", element);
 	}
 
 }

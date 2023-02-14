@@ -19,8 +19,13 @@ public class extentReporterNG extends TestBase {
 		reporter.config().setTimelineEnabled(true);
 
 		extent.attachReporter(reporter);
-		extent.setSystemInfo("USER", System.getProperty("user.dir"));
 		extent.setSystemInfo("Browser", capabilities.getBrowserName());
+		extent.setSystemInfo("Browser Version", capabilities.getBrowserVersion());
+		extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+		extent.setSystemInfo("OS", System.getProperty("os.name"));
+		extent.setSystemInfo("OS Version", System.getProperty("os.version"));
+		
+		
 		
 		
 

@@ -1,94 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-12T23:03:15 EST" name="Suite" finished-at="2023-02-12T23:04:05 EST" duration-ms="49623">
+  <suite started-at="2023-02-13T20:54:43 EST" name="Suite" finished-at="2023-02-13T20:54:52 EST" duration-ms="8976">
     <groups>
+      <group name="Smoke">
+        <method signature="LandingPageTest.testHeaders()[pri:0, instance:tests.LandingPageTest@313ac989]" name="testHeaders" class="tests.LandingPageTest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-02-12T23:03:15 EST" name="Test" finished-at="2023-02-12T23:04:05 EST" duration-ms="49623">
+    <test started-at="2023-02-13T20:54:43 EST" name="Test" finished-at="2023-02-13T20:54:52 EST" duration-ms="8976">
       <class name="tests.LandingPageTest">
-        <test-method is-config="true" signature="initializeTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:15 EST" name="initializeTwo" finished-at="2023-02-12T23:03:22 EST" duration-ms="6922" status="PASS">
+        <test-method is-config="true" signature="initializeTwo()[pri:0, instance:tests.LandingPageTest@313ac989]" started-at="2023-02-13T20:54:43 EST" name="initializeTwo" finished-at="2023-02-13T20:54:50 EST" duration-ms="6964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTwo -->
-        <test-method signature="forgotPassword()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:22 EST" name="forgotPassword" finished-at="2023-02-12T23:03:25 EST" duration-ms="3048" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotPassword -->
-        <test-method is-config="true" signature="tearDownTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:25 EST" name="tearDownTwo" finished-at="2023-02-12T23:03:25 EST" duration-ms="84" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTwo -->
-        <test-method is-config="true" signature="initializeTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:25 EST" name="initializeTwo" finished-at="2023-02-12T23:03:30 EST" duration-ms="4500" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTwo -->
-        <test-method signature="testAllLinks()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:30 EST" name="testAllLinks" finished-at="2023-02-12T23:03:37 EST" duration-ms="6789" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllLinks -->
-        <test-method is-config="true" signature="tearDownTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:37 EST" name="tearDownTwo" finished-at="2023-02-12T23:03:37 EST" duration-ms="77" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTwo -->
-        <test-method is-config="true" signature="initializeTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:37 EST" name="initializeTwo" finished-at="2023-02-12T23:03:41 EST" duration-ms="4851" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTwo -->
-        <test-method signature="testFacebookLink()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:41 EST" name="testFacebookLink" finished-at="2023-02-12T23:03:45 EST" duration-ms="3292" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFacebookLink -->
-        <test-method is-config="true" signature="tearDownTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:45 EST" name="tearDownTwo" finished-at="2023-02-12T23:03:45 EST" duration-ms="141" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTwo -->
-        <test-method is-config="true" signature="initializeTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:45 EST" name="initializeTwo" finished-at="2023-02-12T23:03:52 EST" duration-ms="6626" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTwo -->
-        <test-method signature="testLoginInvalid()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:03:52 EST" name="testLoginInvalid" finished-at="2023-02-12T23:04:04 EST" duration-ms="12769" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="testHeaders()[pri:0, instance:tests.LandingPageTest@313ac989]" started-at="2023-02-13T20:54:50 EST" name="testHeaders" finished-at="2023-02-13T20:54:51 EST" duration-ms="1215" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(), 'No match')]"}
-  (Session info: chrome=109.0.5414.120)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.0', revision: '267030adea'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3abafe8ee60ef53a8e7b1912b492812d, findElement {using=xpath, value=//div[contains(text(), 'No match')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\dhruv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61823}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61823/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3abafe8ee60ef53a8e7b1912b492812d]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(), 'No match')]"}
-  (Session info: chrome=109.0.5414.120)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.0', revision: '267030adea'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3abafe8ee60ef53a8e7b1912b492812d, findElement {using=xpath, value=//div[contains(text(), 'No match')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\dhruv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61823}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61823/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3abafe8ee60ef53a8e7b1912b492812d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy17.getText(Unknown Source)
-at pageobjects.LoginPage.getInvalidUserError(LoginPage.java:67)
-at tests.LandingPageTest.testLoginInvalid(LandingPageTest.java:36)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at tests.LandingPageTest.testHeaders(LandingPageTest.java:69)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -111,11 +48,11 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginInvalid -->
-        <test-method is-config="true" signature="tearDownTwo()[pri:0, instance:tests.LandingPageTest@351d00c0]" started-at="2023-02-12T23:04:05 EST" name="tearDownTwo" finished-at="2023-02-12T23:04:05 EST" duration-ms="91" status="PASS">
+        </test-method> <!-- testHeaders -->
+        <test-method is-config="true" signature="tearDownTwo()[pri:0, instance:tests.LandingPageTest@313ac989]" started-at="2023-02-13T20:54:52 EST" name="tearDownTwo" finished-at="2023-02-13T20:54:52 EST" duration-ms="77" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTwo -->

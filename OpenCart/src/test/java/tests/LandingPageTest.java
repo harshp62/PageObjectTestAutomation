@@ -1,6 +1,7 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
@@ -19,15 +20,16 @@ public class LandingPageTest extends TestBase {
 
 	public static SoftAssert sft = new SoftAssert();
 
-	@Test
+	@Test(groups= {"Sanity"})
 	public void testFacebookLink() throws Exception {
 
 		LandingPage lnd = new LandingPage(driver);
 		sft.assertTrue(lnd.goToFacebookLink());
+		sft.assertAll();
 
 	}
 
-	@Test
+	@Test(groups= {"Sanity"})
 	public void testLoginInvalid() {
 
 		LandingPage lnd = new LandingPage(driver);
@@ -37,7 +39,7 @@ public class LandingPageTest extends TestBase {
 
 	}
 	
-	@Test
+	@Test(groups= {"Sanity"})
 	public void forgotPassword() {
 		
 		LandingPage lnd = new LandingPage(driver);
@@ -48,7 +50,7 @@ public class LandingPageTest extends TestBase {
 		
 	}
 	
-	@Test
+	@Test(groups= {"Sanity"})
 	public void testAllLinks() throws InterruptedException, IOException {
 		
 		LandingPage lnd = new LandingPage(driver);
@@ -58,5 +60,12 @@ public class LandingPageTest extends TestBase {
 		
 		
 		
+	}
+	
+	@Test(groups= {"Smoke"})
+	public void testHeaders() {
+		
+		LandingPage lnd = new LandingPage(driver);
+		assertTrue(lnd.validateHeaderIconText());
 	}
 }

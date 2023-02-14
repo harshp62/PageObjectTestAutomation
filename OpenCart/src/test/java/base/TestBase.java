@@ -58,7 +58,7 @@ public class TestBase {
 //
 //	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void initializeTwo() throws IOException {
 
 		if (driver == null) {
@@ -97,7 +97,7 @@ public class TestBase {
 //		driver.close();
 //	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDownTwo() {
 		
 		driver.close();

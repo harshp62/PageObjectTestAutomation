@@ -5,12 +5,17 @@
     <listener class-name="base.TestListener"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="tests.LandingPageTest">
         <methods>
           <include name="initializeTwo"/>
           <include name="tearDownTwo"/>
-          <include name="testLoginInvalid"/>
+          <include name="testHeaders"/>
         </methods>
       </class> <!-- tests.LandingPageTest -->
     </classes>
