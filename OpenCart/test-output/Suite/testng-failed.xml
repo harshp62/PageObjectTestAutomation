@@ -7,7 +7,7 @@
   <test thread-count="5" parallel="tests" name="Test(failed)">
     <groups>
       <run>
-        <include name="Smoke"/>
+        <include name="db"/>
       </run>
     </groups>
     <classes>
@@ -15,7 +15,7 @@
         <methods>
           <include name="initializeTwo"/>
           <include name="tearDownTwo"/>
-          <include name="testHeaders"/>
+          <include name="testLoginInvalid"/>
         </methods>
       </class> <!-- tests.LandingPageTest -->
     </classes>

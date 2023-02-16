@@ -1,14 +1,18 @@
 package pageobjects;
 
 import java.io.FileNotFoundException;
+import base.Database;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+
 
 public class LoginPage {
 	
@@ -38,14 +42,17 @@ public class LoginPage {
 	
 	
 	
-	public PinValidationPage login() throws IOException {
+	public PinValidationPage login() throws IOException, SQLException {
 		
 		Properties pr = new Properties();
 		FileReader fr = new FileReader(System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");
 		pr.load(fr);
 		
-		emailTextBox.sendKeys(pr.getProperty("username"));
-		passwordTextBox.sendKeys(pr.getProperty("password"));
+		String usernamedb = Database.getCredentials().get(0);
+		String passworddb = Database.getCredentials().get(1);
+		
+		emailTextBox.sendKeys(usernamedb);
+		passwordTextBox.sendKeys(passworddb);
 		loginButton.click();
 		return new PinValidationPage(driver);
 		

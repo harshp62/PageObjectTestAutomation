@@ -42,7 +42,7 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		System.out.println("hi test passed");
+		
 		test.info(MarkupHelper.createLabel("PASSED!!!", ExtentColor.GREEN));
 		test.info("This was a test about"+result.getName());
 		//test.log(Status.PASS, "test passed");

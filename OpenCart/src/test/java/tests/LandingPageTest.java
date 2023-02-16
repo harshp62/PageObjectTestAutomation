@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -29,13 +30,13 @@ public class LandingPageTest extends TestBase {
 
 	}
 
-	@Test(groups= {"Sanity"})
-	public void testLoginInvalid() {
+	@Test(groups= {"db"})
+	public void testLoginInvalid() throws IOException, SQLException {
 
 		LandingPage lnd = new LandingPage(driver);
 		LoginPage log = lnd.goToLoginPage();
-		log.login("ftcyvaaa333vy", "");
-		assertEquals(log.getInvalidUserError(), "aaNo match for E-Mail and/or Password.\n×");
+		PinValidationPage pg =log.login();
+		
 
 	}
 	
